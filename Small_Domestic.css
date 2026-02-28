@@ -1,0 +1,59 @@
+.button {
+    border: 2px solid #000000;
+    color: rgb(0, 0, 0);
+    padding: 5px 34px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+.d-non{
+    display: none;
+}
+
+.d-block{
+    display: block;
+}
+
+.container{
+    display: flex;
+    border: 2px solid #000000;
+    color: rgb(0, 0, 0);
+    padding: 10px 34px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 10px;
+    left: 1950px;    
+} 
+
+.container_1{
+    display: flex;
+    border: 2px solid #000000;
+    color: rgb(0, 0, 0);
+    padding: 10px 34px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 10px;
+    right: 30px;    
+}
+.average_annual{
+font-size: 20px;
+}
+.Calculate{
+    font-size: 20px;
+    width: 100px;
+    height: 30px;
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+    <link href="Small_Domestic.css" rel="stylesheet"></link>
+</head>
+<body>
+    
+    <h2 id="Flow_Rate" >Exceeds 20,000 GPD (yes/no)? : 
+        <button type ="button" class="button" id="button1" onclick="small_domestic('Shallow_Groundwater')">Yes</button>
+        <button type="button" class="button" id="button2" onclick="message()">No</button>
+    </h2>
+    <h2 id ="Shallow_Groundwater" class="d-non">Shallow groundwater (yes/no)? : 
+        <button type="button" class="button" id="button3" onclick="small_domestic('Nitrogen_Limit')">Yes</button>
+        <button type="button" class="button" id="button4" onclick="small_domestic('Excessive_Perc_Rate')">No</button>
+        <button type="button" class="button" id="back" onclick="back('Flow_Rate')">Previous</button>
+    </h2>
+    <h2 id ="Nitrogen_Limit" class="d-non">Nitrogen Limits Required (yes/no)? : 
+        <button type="button" class="button" id="button5" onclick="small_domestic('Sludge_MBR_Similar')">Yes</button>
+        <button type="button" class="button" id="button6" onclick="message1_copy(), nitrogen_limit_NoButton()">No</button>
+        <button type="button" class="button" id="back_4" onclick="back_4('Shallow_Groundwater')">Previous</button>
+    </h2>
+    <h2 id ="Sludge_MBR_Similar" class="d-non">Is plant an activated sludge, MBR, or similar (yes/no)? : 
+        <button type="button" class="button" id="button7"  onclick=" message2_copy(), message3_copy(), message4_copy(), small_domestic('Low_Threat'), sludge_mbr_similar_YESButton()">Yes</button>
+        <button type="button" class="button" id="button8" onclick="message5_copy(), sludge_mbr_similar_NoButton()">No</button>
+        <button type="button" class="button" id="back_5" onclick="back_5('Nitrogen_Limit')">Previous</button>
+    </h2>
+    <h2 id ="Excessive_Perc_Rate" class="d-non">Excessive Perc Rate/Fractured Env. (yes/no)? : 
+        <button type="button" class="button" id="button9" onclick="small_domestic('Nitrogen_Limit_1')">Yes</button>
+        <button type="button" class="button" id="button10" onclick="small_domestic('Exceed_Domestic_Strength')">No</button>
+        <button type="button" class="button" id="back_1" onclick="back_1('Shallow_Groundwater')">Previous</button>
+    </h2>
+    <h2 id ="Nitrogen_Limit_1" class="d-non">Nitrogen Limits Required (yes/no)? : 
+        <button type="button" class="button" id="button11" onclick="small_domestic('Sludge_MBR_Similar_1')">Yes</button>
+        <button type="button" class="button" id="button12" onclick="message1_copy_1(), nitrogen_limit_NoButton_1()">No</button>
+        <button type="button" class="button" id="back_6" onclick="back_6('Excessive_Perc_Rate')">Previous</button>
+    </h2> 
+    <h2 id ="Sludge_MBR_Similar_1" class="d-non">Is plant an activated sludge, MBR, or similar (yes/no)? : 
+        <button type="button" class="button" id="button7"  onclick=" message2_copy_1(), message3_copy_1(), message4_copy_1(), small_domestic('Low_Threat'), sludge_mbr_similar_YESButton_1()">Yes</button>
+        <button type="button" class="button" id="button8" onclick="message5_copy_1(), sludge_mbr_similar_NoButton_1()">No</button>
+        <button type="button" class="button" id="back_7" onclick="back_7('Nitrogen_Limit_1')">Previous</button>
+    </h2>
+    <h2 id ="Exceed_Domestic_Strength" class="d-non">Exceed Domestic WW Strength (yes/no)? : 
+        <button type="button" class="button" id="button13" onclick="small_domestic('Nitrogen_Limit_2')">Yes</button>
+        <button type="button" class="button" id="button14" onclick="small_domestic('Nitrogen_Removal')">No</button>
+        <button type="button" class="button" id="back_2" onclick="back_2('Excessive_Perc_Rate')">Previous</button>
+    </h2>
+    <h2 id ="Nitrogen_Limit_2" class="d-non">Nitrogen Limits Required (yes/no)? : 
+        <button type="button" class="button" id="button11" onclick="small_domestic('Sludge_MBR_Similar_2')">Yes</button>
+        <button type="button" class="button" id="button12" onclick="message1_copy_2(),nitrogen_limit_NoButton_2()">No</button>
+        <button type="button" class="button" id="back_8" onclick="back_8('Exceed_Domestic_Strength')">Previous</button>
+    </h2>
+    <h2 id ="Sludge_MBR_Similar_2" class="d-non">Is plant an activated sludge, MBR, or similar (yes/no)? : 
+        <button type="button" class="button" id="button7"  onclick=" message2_copy_2(), message3_copy_2(), message4_copy_2(), small_domestic('Low_Threat'), sludge_mbr_similar_YESButton_2() ">Yes</button>
+        <button type="button" class="button" id="button8" onclick="message5_copy_2(), sludge_mbr_similar_NoButton_2()">No</button>
+        <button type="button" class="button" id="back_9" onclick="back_9('Nitrogen_Limit_2')">Previous</button>
+    </h2>
+    <!--Left off in "Nitrogen Removal prompt "--> 
+    <!--message copy used to separate between "exceeds 20k GPD" prompt and "Exceed Domestic WW strength" prompt-->
+    <h2 id ="Nitrogen_Removal" class="d-non">Nitrogen Removal May Be Required (yes/no)? : 
+        <button type="button" class="button" id="button15" onclick="small_domestic('Nitrogen_Limit_3')">Yes</button>
+        <button type="button" class="button" id="button16" onclick="message_copy(), nitrogen_removal_NoButton()">No</button>
+        <button type="button" class="button" id="back_3" onclick="back_3('Exceed_Domestic_Strength')">Previous</button>
+    </h2>
+    <h2 id ="Nitrogen_Limit_3" class="d-non">Nitrogen Limits Required (yes/no)? : 
+        <button type="button" class="button" id="button11" onclick="small_domestic('Sludge_MBR_Similar_3')">Yes</button>
+        <button type="button" class="button" id="button12" onclick="message1_copy_3(),nitrogen_limit_NoButton_3()">No</button>
+        <button type="button" class="button" id="back_10" onclick="back_10('Nitrogen_Removal')">Previous</button>
+    </h2>
+    <h2 id ="Sludge_MBR_Similar_3" class="d-non">Is plant an activated sludge, MBR, or similar (yes/no)? : 
+        <button type="button" class="button" id="button7"  onclick=" message2(), message3(), message4(), small_domestic('Low_Threat') ">Yes</button>
+        <button type="button" class="button" id="button8" onclick="message5_copy_3(), sludge_mbr_similar_NoButton_3()">No</button>
+        <button type="button" class="button" id="back_11" onclick="back_11('Nitrogen_Limit_3')">Previous</button>
+    </h2>  
+
+    <h1 id="message"> </h1>
+<!--message copy used to separate between "exceeds 20k GPD" prompt and "Exceed Domestic WW strength" prompt-->
+    <h1 id="message_copy" class="d-non"> </h1>
+    
+    <h1 id="message1"> </h1>
+
+    <h1 id="message1_copy" class="d-non"> </h1>
+
+    <h1 id="message1_copy_1" class="d-non"> </h1>
+
+    <h1 id="message1_copy_2" class="d-non"> </h1>
+
+    <h1 id="message1_copy_3" class="d-non"> </h1>
+    
+    <h1 id="message2"> </h1>
+    
+    <h1 id="message2_copy" class="d-non"> </h1>
+
+    <h1 id="message2_copy_1" class="d-non"> </h1>
+    
+    <h1 id="message2_copy_2" class="d-non"> </h1>
+
+    <h1 id="message3"> </h1>
+
+    <h1 id="message3_copy" class="d-non"> </h1>
+
+    <h1 id="message3_copy_1" class="d-non"> </h1>
+    
+    <h1 id="message3_copy_2" class="d-non"> </h1>
+    
+    <h1 id="message4"> </h1>
+
+    <h1 id="message4_copy" class="d-non"> </h1>
+    
+    <h1 id="message4_copy_1" class="d-non"> </h1>
+    
+    <h1 id="message4_copy_2" class="d-non"> </h1>
+
+    
+
+    <!--Left off on "is the effuent limit based on low threat(adequate attentuation)(yes/no)" prompt previuos button-->
+    <h2 id ="Low_Threat" class="d-non">Is The Effuent Limit Based On Low Threat(Adequate Attenuation) (yes/no)? : 
+        <button type="button" class="button" id="button9" onclick="small_domestic('average_annual_1')">Yes</button>
+        <button type="button" class="button" id="button10" onclick="message7()">No</button>
+    </h2>
+    <h2>
+        <label id ="average_annual_1" class="d-non">Annual Avg of TN(TN greater than or equal to 10 mg/L):
+            <input type ="number" id ="average_annual" name ="average_annual" class="average_annual"> mg/L</input>
+            <button onclick = "average_annual()" class="Calculate">Calculate</button>
+        </label> 
+    </h2>
+
+    <h1 id="message6"> </h1>
+    
+    <h1 id="message5" class="d-non"> </h1>
+
+    <h1 id="message5_copy" class="d-non"> </h1>
+
+    <h1 id="message5_copy_1" class="d-non"> </h1>
+
+    <h1 id="message5_copy_2" class="d-non"> </h1>
+
+    <h1 id="message5_copy_3" class="d-non"> </h1>
+    
+    <h1 id="message7"> </h1>
+
+    <a href="Website.html">
+        <div>
+            <button class="container_1">Home Page</button>
+        </div>
+    </a>
+
+    <Script src = "Small_Domestic.js" type="text/javascript"></script>
+</body>
+</html>

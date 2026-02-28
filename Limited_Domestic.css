@@ -1,0 +1,54 @@
+input[type=text] {
+    width: 6%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing:border-box;
+    border: 3px solid #ccc;   
+}
+
+.container{
+    display: flex;
+    border: 2px solid #000000;
+    color: rgb(0, 0, 0);
+    padding: 10px 34px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 10px;
+    left: 1950px;    
+} 
+
+.container_1{
+    display: flex;
+    border: 2px solid #000000;
+    color: rgb(0, 0, 0);
+    padding: 10px 34px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 10px;
+    right: 30px;    
+} 
+
+.Calculate{
+    font-size: 20px;
+    width: 100px;
+    height: 30px;
+}
+.Flow_Rate{
+    font-size: 20px;
+}
+.a_Acres{
+    font-size: 20px;
+}
+.AAP{
+    font-size: 20px;
+}
